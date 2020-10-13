@@ -10,6 +10,9 @@
   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
     integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
     crossorigin=""></script>
+  <script src="https://kit.fontawesome.com/fa5117c01c.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="style.css">
 
   <title>IP Address Tracker</title>
@@ -18,14 +21,18 @@
 
 <body>
   <div class="container">
-    <form action="" class="ipForm">
-      <input type="text" name="ipInput" class="ipInput">
-    </form>
+    <div class="title-and-form">
+      <h1>IP Address Tracker</h1>
+      <form action="" class="ipForm">
+        <input type="text" name="ipInput" class="ipInput" placeholder="Search for any ip address or domain...">
+        <button><i class="fas fa-angle-right"></i></button>
+      </form>
+    </div>
     <div class="details">
-      <h4>IP Address:</h4>
-      <h4>Location:</h4>
-      <h4>Timezone: <span>UTC</span></h4>
-      <h4>ISP: </h4>
+      <h4>IP Address: <span></span></h4>
+      <h4>Location: <span></span></h4>
+      <h4>Timezone: <span></span></h4>
+      <h4>ISP: <span></span></h4>
     </div>
   </div>
   <div id="mapid"></div>
