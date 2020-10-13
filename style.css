@@ -1,0 +1,12 @@
+#mapid {
+  height: 500px;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+h4 {
+  font-size: 0.75rem;
+}
