@@ -39,7 +39,8 @@ body {
   align-items: center;
 }
 .title-and-form input {
-  width: 250px;
+  max-width: 250px;
+  width: 210px;
   height: 35px;
   border-bottom-left-radius: 10px;
   border-top-left-radius: 10px;
@@ -89,6 +90,7 @@ body {
   flex-direction: column;
   text-align: center;
   background: #fff;
+  min-width: 225px;
   width: 55%;
   margin-top: 20px;
   padding: 20px;
