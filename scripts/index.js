@@ -44,3 +44,28 @@ const mymap = L.map("mapid", {
     ),
   ],
 });
+
+const updateLocal = (data) => {
+  let lat = data.location.lat;
+  let lng = data.location.lng;
+  mymap.setView([lat, lng], 13);
+  L.marker([lat, lng]).addTo(mymap);
+  details.innerHTML = ` 
+    <h4>IP Address: ${data.ip}</h4>
+    <h4>Location: ${data.location.city}, ${data.location.region}</h4>
+    <h4>Timezone:<span>UTC-</span> ${data.location.timezone}</h4>
+    <h4>ISP: ${data.isp}</h4>`;
+};
+
+const updateMark = () => {
+  getIP
+    .defaultIP()
+    .then((data) => {
+      let localIP = data.ip;
+      getIP.local(localIP).then((data) => updateLocal(data));
+    })
+
+    .catch((err) => console.log("fuck"));
+};
+
+document.addEventListener("load", updateMark());
