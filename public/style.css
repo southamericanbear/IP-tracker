@@ -1,5 +1,6 @@
 body {
   background: url(images/pattern-bg.png) no-repeat;
+  background-size: cover;
   margin: 0;
   font-family: "Rubik", sans-serif;
   height: 500px;
